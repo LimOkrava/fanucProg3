@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fanuc programmator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="shapka-text">FANUC</div>
+    <table class="zagolovok"><tr><td>Операция</td><td>Программа</td></tr></table>
+    <hr>
+
+<div class="ramkaOperation">
+
+    <select class="menu" id="operation">
+        <option value=1>Начало</option>
+        <option value=2>Торцовка</option>
+        <option value=3>Проход</option>
+        <option value=4>Расточка</option>
+        <option value=5>Сверление</option>
+        <option value=6>Резьба</option>
+        <option value=7>Метчик</option>
+        <option value=8>Отрезка</option>
+        <option value=9>Торцевая канавка</option>
+        <option value=10>Радиальная канавка</option>
+        <option value=11>Мануал</option>
+    </select>
+
+    <div class="nachalo">
+        <form class="textParam">Номер программы<input type="text" class="numProg" ></form>
+        <form class="textParam">Деталь<input type="text" class="detal"></form>
+        <form class="textParam">Макс. обороты<input type="text" class="oboroti" alt="2000" ></form>
+
+        <select class="textParam" id="material">
+            <option id="stal">Сталь</option>
+            <option  id="nj">НЖ</option>
+            <option id="kalenka">Каленка</option>
+        </select>
+
+        <button class="kodNachalo">КОД</button>
+
+        <textarea class = "outNachalo" rows="20"></textarea>
+    </div>
+
+
+    <div class="torcovka">
+        <form class="textParam">D заготовки<input type="text" class="diamZag" size="3"></form>
+        <form class="textParam">D отверстия<input type="text" class="diamOtv" value="0." size="3"></form>
+        <form class="textParam">Съём<input type="text" class="siemZtorec" value="1" size="3"></form>
+        <form class="textParam">Z<input type="text" class="zNull" value="0." size="3"></form>
+        <form class="textParam">Съём за проход<input type="text" class="siemZprohod" value="0.8" size="3"></form>
+
+        <button class="kodTorcovka">КОД</button>
+
+        <textarea class="outTorcovka" rows="20"></textarea>
+    </div>
+
+    <div class="prohodnoy">
+        <form class="textParam">X старт<input type="text" class="xStartProhod" size="3"></form>
+        <form class="textParam">Z старт<input type="text" class="zStartProhod" value="0." size="3"></form>
+        <form class="textParam">Съём<input type="text" class="siemXprohod" value="2" size="3"></form>
+        <form class="textParam">F подача<input type="text" class="podachaProhod" value="0.25" size="3"></form>
+        <form class="textParam">Припуск X<input type="text" class="pripuskXprohod" value="0." size="3"></form>
+        <form class="textParam">Припуск Z<input type="text" class="pripuskZprohod" value="0." size="3"></form>
+        <form class="textParam">Описание контура<textarea type="text" class="konturProhod" value="G1X" rows="8">G1X</textarea></form>
+
+        <button class="kodProhodnoy">КОД</button>
+
+        <textarea class="outProhodnoyChern" rows="20"></textarea>
+        <textarea class="outProhodnoyChist" rows="20"></textarea>
+    </div>
+
+    <div class="rastochnoy">
+        <form class="textParam">X старт<input type="text" class="xStartRastoch" size="3"></form>
+        <form class="textParam">Z старт<input type="text" class="zStartRastoch" value="0." size="3"></form>
+        <form class="textParam">Съём<input type="text" class="siemXrastoch" value="2" size="3"></form>
+        <form class="textParam">F подача<input type="text" class="podachaRastoch" value="0.15" size="3"></form>
+        <form class="textParam">Припуск X<input type="text" class="pripuskXrastoch" value="0." size="3"></form>
+        <form class="textParam">Припуск Z<input type="text" class="pripuskZrastoch" value="0." size="3"></form>
+        <form class="textParam">Описание контура<textarea type="text" class="konturRastoch" value="G1X" rows="8" size="3">G1X</textarea></form>
+
+        <button class="kodRastochnoy">КОД</button>
+
+        <textarea class="outRastochnoyChern" rows="20"></textarea>
+        <textarea class="outRastochnoyChist" rows="20"></textarea>
+    </div>
+
+    <div class="sverlenie">
+        <select class="vidSverla">
+            <option value="P6M5">Р6М5</option>
+            <option value="TV.SPLAV">Твердый сплав</option>
+            <option value="DRIL">С пластинами</option>
+            <option value="FREZA">Фреза</option>
+        </select>
+        <form class="textParam">Диаметр сверла<input type="text" class="dSverla"></form>
+        <form class="textParam">F подача<input type="text" class="podachaSverlo" value="0.1"></form>
+        <form class="textParam">Z нач.<input type="text" class="zStartSverlo" value="0."></form>
+        <form class="textParam">Z кон.<input type="text" class="zFinishSverlo"></form>
+        <form class="textParam">Шаг<input type="text" class="shagSverlovki" value="3"></form>
+ 
+        <button class="kodSverlo">КОД</button>
+
+        <textarea class="outSverlo" rows="20"></textarea>
+    </div>
+
+    <div class="rezba">
+
+        <div id="paragrafRezbi">
+            <select class="polojenieRezbi">
+                <option value="narujRezba">Наружная</option>
+                <option value="vnutrRezba">Внутренняя</option>
+            </select>
+
+            <select class="vidRezbi">
+                <option value="M">M</option>
+                <!-- <option value="G">G</option>
+                <option value="Tr">Tr</option> -->
+            </select>
+
+            <form class="textParam"><input type="text" class="dRezbi"></form>
+            <form class="textParam">x<input type="text" class="shagRezbi"></form>
+        </div>
+
+        <form class="textParam">Z нач.<input type="text" class="zStartRezba"></form>
+        <form class="textParam">Z кон.<input type="text" class="zFinishRezba"></form>
+
+        <select class="rezecRezbi">
+            <option value="3">правый</option>
+            <option value="4">левый</option>
+        </select>
+        <button class="kodRezba">КОД</button>
+        <textarea class="outRezba" rows="20"></textarea>
+    </div>
+
+    <div class="metchik">
+        <form class="textParam">Шаг<input type="text" class="shagMetchik" ></form>
+        <form class="textParam">Z нач.<input type="text" class="zStartMetchik" value="0"></form>
+        <form class="textParam">Z кон.<input type="text" class="zFinishMetchik"></form>
+        <form class="textParam">S<input type="text" class="sMetchik" value="50."></form>
+        <button class="kodMetchik">КОД</button>
+        <textarea class="outMetchik" rows="20"></textarea>
+    </div>
+
+    <div class="otrezka">
+        <a class="box-img">
+            <img class="Kartinka1" src="otrezka3.jpg">
+            <form class="textNaImg1"class="textParam">X1<input type="text" class="x1Otrezka" size="3"></form>
+            <form class="textNaImg2">X2<input type="text" class="x2Otrezka" value="0" size="3"></form>
+            <form class="textNaImg3">Z<input type="text" class="zOtrezka" size="2"></form>
+            <form class="textNaImg4">Фаска<input type="text" class="faskaOtrezka" size="2"></form>
+        </a>
+        <button class="kodOtrezka">КОД</button>
+        <textarea class="outOtrezka" rows="20"></textarea>
+    </div>
+
+    <div class="torcKanavka">
+        <a class="box-img">
+                <img class="Kartinka1" src="torcKan2.jpg">
+            <form class="textNaImg5" class="textParam">X2<input type="text" class="dVnutrTorcKan" size="3"></form>
+            <form class="textNaImg6" class="textParam">X1<input type="text" class="dNarujTorcKan" size="3"></form>
+            <form class="textNaImg7" class="textParam">Глубина<input type="text" class="glubKan" size="3"></form>
+            <form class="textNaImg8" class="textParam">r<input type="text" class="rKan" value="0." size="1"></form>
+            <form class="textNaImg9" class="textParam">Z ноль<input type="text" class="nullKan" value="0." size="2"></form>
+            <form class="textNaImg9.5" class="textParam">R<input type="text" class="faskaTorcKan" value="0.2" size="2"></form>
+        </a>
+        <form class="textParam">Ширина пластины<input type="text" class="plastinaTorec" value="4" size="3"></form>
+        <form class="textParam">Перекрытие пластины<input type="text" class="perekritPlast" value="0.75" size="3"></form>
+        <form class="textParam">F, мм/об<input type="text" class="fTorcKan" value="0.1" size="3"></form>
+        <form class="textParam">S, м/мин<input type="text" class="sTorcKan" value="60" size="3"></form>
+        <select class="textParam" id="vidTorcKan">
+            <option value = 0>Снизу</option>
+            <option value = 1>Сверху</option>
+        </select>
+        <button class="kodTorcKan">КОД</button>
+        <textarea class="outTorcKan" rows="20"></textarea>
+    </div>
+
+    <div class="radKanavka">
+        <select class="textParam" id="vidRadKan">
+            <option value = 0>Наружная</option>
+            <option value = 1>Внутренняя</option>
+        </select>
+        <a class="box-img">
+            <img src="RadKanNaruj.jpg" alt="radKanavka" class="RadKanNaruj">
+            <img src="RadKanVnutr2.jpg" alt="radKanavka" class="RadKanVnutr">
+            <form class="textNaImg10" class="textParam">Z<input type="text" class="zRadKan" size="3"></form>
+            <form class="textNaImg11" class="textParam">b<input type="text" class="shirRadKan" size="2"></form>
+            <form class="textNaImg12" class="textParam">X1<input type="text" class="d1" size="3"></form>
+            <form class="textNaImg13" class="textParam">X2<input type="text" class="d2" size="3"></form>
+            <form class="textNaImg14" class="textParam">R<input type="text" class="rKan" value="0." size="3"></form>
+            <form class="textNaImg15" class="textParam">r<input type="text" class="skrugl" value="0.2" size="3"></form>
+        </a>
+        <form class="textParam">Ширина пластины<input type="text" class="plastinaRad" value="4" size="3"></form>
+        <form class="textParam">Перекрытие пластины<input type="text" class="perekritPlast" value="0.75" size="3"></form>
+        <form class="textParam">F, мм/об<input type="text" class="fTorcKan" value="4" size="3"></form>
+        <form class="textParam">S, м/мин<input type="text" class="sTorcKan" value="60" size="3"></form>
+        <button class="kodRadKan">КОД</button>
+        <textarea class="outRadKan" rows="20"></textarea>
+    </div>
+
+    <div class="manual">
+        <select class="rezecManual">
+            <option value="3">правый</option>
+            <option value="4">левый</option>
+        </select>
+        <form class="textParam">V<input type="text" class="vManual" value="100" size="3"></form>
+        <button class="kodManual">КОД</button>
+        <textarea class="outManual" rows="20"></textarea>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

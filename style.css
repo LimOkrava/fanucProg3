@@ -1,0 +1,421 @@
+body {
+    margin-left:20px;
+    padding:0px;
+    max-width: 75%;
+    background-color: cornsilk;
+    border: 2px solid black;
+    padding:10px;
+}
+
+.shapka-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.zagolovok {
+    font-family: 'Courier New', Courier, monospace;
+    width: 75%; /* Ширина ячеек */
+    margin-left: 25%;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.ramkaOperation {
+    position:relative;
+    max-width: 50%;
+    border: 1px solid black;
+    padding-left: 10px;
+}
+
+.textParam {
+    padding: 5px 25px 0px 5px;
+    /* width:50%; */
+}
+
+.menu {
+    max-width:55%;
+    margin-top: 20px;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 36px;
+    background-color: cornsilk;
+    border: 2px solid black;
+}
+
+.nachalo {
+    display: none;
+    font-size: 28px;
+}
+
+.torcovka {
+    display: none;
+    font-size: 28px;
+}
+
+.prohodnoy {
+    display: none;
+    font-size: 28px;
+}
+
+.rastochnoy {
+    display: none;
+    font-size: 28px;
+}
+
+.sverlenie  {
+    display: none;
+    font-size: 28px;
+}
+
+.rezba {
+    display: none;
+    font-size: 28px;
+}
+
+.metchik {
+    display: none;
+    font-size: 28px;
+}
+
+.otrezka {
+    display: none;
+    font-size: 28px;
+}
+
+.torcKanavka {
+    display: none;
+    font-size: 28px;
+}
+
+.radKanavka {
+    display: none;
+    font-size: 28px;
+}
+
+.paragrafRezbi {
+    display: inline-block;
+}
+
+.outTorcovka {
+    position: relative;
+    border: 1px solid black;
+    width: 93%;
+}
+
+.outNachalo {
+    position: relative;
+    border: 1px solid black;
+    width: 93%;    
+}
+
+.outProhodnoyChern {
+    position: relative;
+    border: 1px solid black;
+    width: 45%;    
+}
+
+.outProhodnoyChist {
+    position: relative;
+    border: 1px solid black;
+    width: 45%;    
+}
+
+.outRastochnoyChern {
+    position: relative;
+    border: 1px solid black;
+    width: 45%;    
+}
+
+.outRastochnoyChist {
+    position: relative;
+    border: 1px solid black;
+    width: 45%;    
+}
+
+.outSverlo {
+    position: relative;
+    border: 1px solid black;
+    width: 93%;    
+}
+
+.outRezba {
+    position: relative;
+    border: 1px solid black;
+    width: 93%;    
+}
+
+.outMetchik {
+    position: relative;
+    border: 1px solid black;
+    width: 93%;    
+}
+
+.outOtrezka {
+    position: relative;
+    border: 1px solid black;
+    width: 93%;    
+}
+
+.outTorcKan {
+    position: relative;
+    border: 1px solid black;
+    width: 93%;    
+}
+
+.outRadKan {
+    position: relative;
+    border: 1px solid black;
+    width: 93%;   
+}
+
+.outManual {
+    position: relative;
+    border: 1px solid black;
+    width: 93%;   
+}
+
+.kodTorcovka {
+    position: relative;
+    width: 95%;
+}
+
+.kodNachalo {
+    position: relative;
+    width: 95%;
+}
+
+.kodProhodnoy {
+    position: relative;
+    width: 95%;
+}
+
+.kodRastochnoy {
+    position: relative;
+    width: 95%;
+}
+
+.kodSverlo {
+    position: relative;
+    width: 95%;
+}
+
+.kodRezba {
+    position: relative;
+    width: 95%;
+}
+
+.kodMetchik {
+    position: relative;
+    width: 95%;
+}
+
+.kodOtrezka {
+    position: relative;
+    width: 95%;
+}
+
+.kodTorcKan {
+    position: relative;
+    width: 95%;
+}
+
+.kodRadKan {
+    position: relative;
+    width: 95%;
+}
+
+.kodManual {
+    position: relative;
+    width: 95%;
+}
+
+p {
+    padding: 0px;
+}
+
+.konturProhod {
+    position: relative;
+    width: 95%;
+}
+
+.konturRastoch {
+    position: relative;
+    width: 95%;
+}
+
+.dSverla {
+    position: relative;
+    width: 15%;
+}
+
+.Kartinka1 {
+    max-width: 100%;
+}
+
+/* ----------- */
+
+.numProg {
+    position: relative;
+    width: 50px;
+    margin: 0px 0px 0px 10px;
+}
+
+.oboroti {
+    position: relative;
+    width: 50px;
+    margin: 0px 0px 0px 10px;
+}
+
+.diamZag {
+    position: relative;
+    width: 50px;
+    margin: 0px 0px 0px 10px;
+}
+
+/* sdf */
+
+.box-img{
+    position: relative;
+    display: inline-block;
+  }
+
+   
+  .textNaImg1 {
+    position: absolute;
+    left: 60%;
+    right: 0;
+    top: 10%;
+    padding: 0px;
+  }
+
+  .textNaImg2 {
+    position: absolute;
+    left: 70%;
+    right: 0;
+    top: 50%;
+    padding: 0px;
+  }
+
+  .textNaImg3 {
+    position: absolute;
+    left: 15%;
+    right: 0;
+    top: 40%;
+    padding: 0px;
+  }
+
+  .textNaImg4 {
+    position: absolute;
+    left: 5%;
+    right: 0;
+    top: 0;
+    padding: 0px;
+  }
+
+  .textNaImg5 {
+    position: absolute;
+    left: 29%;
+    right: 0;
+    top: 55%;
+    padding: 0px;
+  }
+
+  .textNaImg6 {
+    position: absolute;
+    left: 70%;
+    right: 0;
+    top: 20%;
+    padding: 0px;
+  }
+
+  .textNaImg7 {
+    position: absolute;
+    left: 0%;
+    right: 0;
+    top: 2%;
+    padding: 0px;
+  }
+
+  .textNaImg8 {
+    position: absolute;
+    left: 0%;
+    right: 0;
+    top: 63%;
+    padding: 0px;
+  }
+
+  .textNaImg9 {
+    position: absolute;
+    left: 0%;
+    right: 0;
+    top: 80%;
+    padding: 0px;
+  }
+
+  .textNaImg10 {
+    position: absolute;
+    left: 74%;
+    right: 0;
+    top: 6%;
+    padding: 0px;
+  }
+
+  .textNaImg11 {
+    position: absolute;
+    /* display:ruby-text-container; */
+    left: 37%;
+    right: 0;
+    top: 22%;
+  }
+
+  .textNaImg12 {
+    position: absolute;
+    left: 3%;
+    right: 0;
+    top: 85%;
+    padding: 0px;
+  }
+
+  .textNaImg13 {
+    position: absolute;
+    left: 68%;
+    right: 0;
+    top: 85%;
+    padding: 0px;
+  }
+
+  .textNaImg14 {
+    position: absolute;
+    left: 55%;
+    right: 0;
+    top: 62%;
+    padding: 0px;
+  }
+
+  .textNaImg15 {
+    position: absolute;
+    left: 0%;
+    right: 0;
+    top: 10%;
+    padding: 0px;
+  }
+
+  .RadKanVnutr {
+    display: none;
+    position: relative;
+  }
+
+  .RadKanNaruj {
+    display: none;
+    position: relative;
+  }
+
+  input {
+      position: relative;
+      bottom: 2px;
+      margin-left: 5px;
+  }
